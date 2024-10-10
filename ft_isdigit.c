@@ -6,11 +6,11 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:07:33 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/07 17:07:52 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:45:54 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

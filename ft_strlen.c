@@ -6,11 +6,11 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:11:19 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/07 17:12:14 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/08 18:46:33 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

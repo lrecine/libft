@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:08:08 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/07 17:08:55 by lrecine-         ###   ########.fr       */
+/*   Created: 2024/10/08 19:37:02 by lrecine-          #+#    #+#             */
+/*   Updated: 2024/10/10 13:53:00 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {

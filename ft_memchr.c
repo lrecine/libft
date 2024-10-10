@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:26:07 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/10 19:11:50 by lrecine-         ###   ########.fr       */
+/*   Created: 2024/10/09 13:26:53 by lrecine-          #+#    #+#             */
+/*   Updated: 2024/10/09 13:27:58 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*ptr;
+	unsigned char	*str;
+	unsigned char	uc;
 
-	ptr = (unsigned char *)s;
+	str = (unsigned char *)s;
+	uc = (unsigned char)c;
 	while (n--)
-		*ptr++ = 0;
+	{
+		if (*str == uc)
+			return (str);
+		str++;
+	}
+	return (NULL);
 }

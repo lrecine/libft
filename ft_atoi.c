@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 17:26:07 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/10 19:11:50 by lrecine-         ###   ########.fr       */
+/*   Created: 2024/10/09 13:21:25 by lrecine-          #+#    #+#             */
+/*   Updated: 2024/10/10 13:08:08 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_atoi(const char *str)
 {
-	unsigned char	*ptr;
+	int		i;
+	int		neg;
+	int		nb;
 
-	ptr = (unsigned char *)s;
-	while (n--)
-		*ptr++ = 0;
+	i = 0;
+	neg = 1;
+	nb = 0;
+	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			neg = -1;
+		i++;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + (str[i] - '0');
+		i++;
+	}
+	return (nb * neg);
 }
