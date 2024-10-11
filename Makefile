@@ -6,13 +6,13 @@
 #    By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 13:52:22 by lrecine-          #+#    #+#              #
-#    Updated: 2024/10/09 13:15:02 by lrecine-         ###   ########.fr        #
+#    Updated: 2024/10/11 15:41:50 by lrecine-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS_FILES = ft_*.c
+SRCS_FILES = $(wildcard ft_*.c)
 OBJS_FILES = $(SRCS_FILES:.c=.o)
 
 CC = cc
@@ -23,7 +23,7 @@ all: $(NAME)
 $(NAME): $(OBJS_FILES)
 	ar rcs $(NAME) $(OBJS_FILES)
 
-%o: %c
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

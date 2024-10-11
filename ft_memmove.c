@@ -6,7 +6,7 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:54:51 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/08 18:46:13 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:52:55 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
-	if (d < s)
+	if (d < s || d > s + len)
 	{
 		while (len--)
 			*d++ = *s++;
