@@ -6,12 +6,11 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 17:13:26 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/09 14:00:38 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/11 17:29:02 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

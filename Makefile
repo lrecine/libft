@@ -6,7 +6,7 @@
 #    By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 13:52:22 by lrecine-          #+#    #+#              #
-#    Updated: 2024/10/11 15:41:50 by lrecine-         ###   ########.fr        #
+#    Updated: 2024/10/15 19:47:58 by lrecine-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,9 @@ $(NAME): $(OBJS_FILES)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
+
+bonus: $(OBJS_FILES)
+	ar rcs $(NAME) $(OBJS_FILES)
 
 clean:
 	rm -f $(OBJS_FILES)
