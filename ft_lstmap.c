@@ -6,7 +6,7 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:56:53 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/17 15:11:33 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:16:34 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*current;
 
-	if (!lst)
+	if (!lst || !del || !f)
 		return (NULL);
 	new_lst = ft_lstnew(f(lst->content));
 	if (!new_lst)

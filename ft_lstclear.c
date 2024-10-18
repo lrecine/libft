@@ -6,7 +6,7 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:44:32 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/15 19:44:49 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:01:42 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*current;
 	t_list	*next;
 
+	if(!lst || !del)
+		return ;
 	current = *lst;
 	while (current)
 	{
 		next = current->next;
 		ft_lstdelone(current, del);
+		free(current);
 		current = next;
 	}
 	*lst = NULL;

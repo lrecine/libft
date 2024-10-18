@@ -6,7 +6,7 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 13:41:26 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/10 18:56:53 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/18 17:56:09 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char	*ft_itoa(int n)
 	len = get_digits(n);
 	if (n < 0)
 		num *= -1;
+	if (n == 0)
+		return (ft_strdup("0"));
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);

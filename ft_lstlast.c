@@ -6,7 +6,7 @@
 /*   By: lrecine- <lrecine-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:40:26 by lrecine-          #+#    #+#             */
-/*   Updated: 2024/10/15 19:40:40 by lrecine-         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:06:12 by lrecine-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*current;
 
 	current = lst;
+	if (!lst)
+		return (lst);
 	if (!current)
 		return (NULL);
 	while (current->next)
